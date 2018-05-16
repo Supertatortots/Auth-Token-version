@@ -29,6 +29,18 @@ module.exports = function(server) {
   server.use("/api/auth", authRoutes);
 };
 
+server.get('/logout', (req, res) => {
+  if (req.session) {
+    res.session.destroy(function(err) {
+      if (err) {
+        res.send('Error');
+      } else {
+        res.send('Good Bye');
+      }
+    });
+  }
+});
+
 server.listen(5500, () =>
   console.log("\n ~~~ API Running on port 5500 ~~~ \n")
 );
