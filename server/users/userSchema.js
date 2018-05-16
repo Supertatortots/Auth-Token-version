@@ -26,7 +26,7 @@ userSchema.pre('save', function (next) {
   });
 });
 
-userSchema.methods.comparePassword = function (passwordGuess) {
+userSchema.methods.validatePassword = function (passwordGuess) {
   return bcrypt.compare(passwordGuess, this.password);
 };
 
