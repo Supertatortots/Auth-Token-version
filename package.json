@@ -1,7 +1,7 @@
 {
   "name": "auth-token-version",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "./server/server.js",
   "scripts": {
     "start": "nodemon server.js"
   },
