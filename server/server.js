@@ -5,7 +5,7 @@ const authRoutes = require("./auth/authRoutes");
 
 const db = require("./_config/db");
 const setupMiddleware = require("./_config/middleware");
-// const setupRoutes = require("./_config/routes");
+const setupRoutes = require("./_config/routes");
 
 const server = express();
 
@@ -17,7 +17,7 @@ db
   });
 
 setupMiddleware(server);
-// setupRoutes(server);
+setupRoutes(server);
 
 module.exports = function(server) {
   // sanity check route
